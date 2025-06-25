@@ -62,7 +62,12 @@ nav {
   gap: 30px;
 }
 
-.gnb-icon button > img {
+.gnb-icons button {
+  width: 36px;
+  height: 36px;
+}
+
+.gnb-icons button > img {
   width: 24px;
   height: 24px;
 }
