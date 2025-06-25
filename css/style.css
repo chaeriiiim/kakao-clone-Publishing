@@ -40,7 +40,7 @@ header {
   width: 100%;
 }
 
-.container {
+.header-inner {
   max-width: 1315px;
   margin: 0 auto;
 }
