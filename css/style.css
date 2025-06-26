@@ -97,8 +97,11 @@ main {
 }
 
 .visual-video {
+  position: relative;
   width: 1094px;
   height: 621px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .visual-video video {
@@ -106,7 +109,58 @@ main {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 20px;
+}
+
+.video-overlay {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.visual-cta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 23px 23px 28px 23px;
+  border-radius: 0 36px 0 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.visual-cta::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -36px;
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  background-image: url(
+    data:image/svg + xml;charset=utf-8,
+    %3Csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 38 38"%3E%3Cpathd="M2 0H0v38h38v-2C18.1 36 2 19.9 2 0z"fill="%23fff"/%3E%3C/svg%3E
+  );
+  z-index: 1;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 600;
+
+  /* padding: 12px 20px; */
+  text-decoration: none;
+}
+
+.cta-button img {
+  width: 48px;
+  height: 48px;
 }
 
 .visual-content {
