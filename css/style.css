@@ -124,6 +124,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .card1 p {
@@ -135,10 +136,37 @@ main {
   width: 206px;
   height: 259px;
   background-color: #f3f3f3;
+  border-radius: 20px;
+  padding: 12px;
+}
+
+.visual-yellow-badge {
+  background-color: #fae100;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.visual-yellow-badge span {
+  font-size: 12px;
 }
 
 .card3 {
   width: 206px;
   height: 124px;
   background-color: #fae203;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card3 img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.card3 p {
+  font-size: 20px;
 }
