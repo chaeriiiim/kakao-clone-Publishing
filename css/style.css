@@ -99,7 +99,6 @@ main {
 .visual-video {
   width: 1094px;
   height: 621px;
-  /* background-color: antiquewhite; */
 }
 
 .visual-video video {
@@ -107,6 +106,7 @@ main {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 20px;
 }
 
 .visual-content {
@@ -120,6 +120,15 @@ main {
   width: 206px;
   height: 206px;
   background-color: #fae203;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card1 p {
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .card2 {
