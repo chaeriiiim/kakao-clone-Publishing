@@ -296,3 +296,15 @@ main {
 .card3 p {
   font-size: 20px;
 }
+
+/* 카카오 스토리 섹션 */
+.kakao-story-section {
+  max-width: 1315px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.kakao-story-section span {
+  font-size: 32px;
+  font-weight: 500;
+}
