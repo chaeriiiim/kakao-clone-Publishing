@@ -206,6 +206,27 @@ main {
   padding: 20px;
 }
 
+.visual-slide-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
 .card2 a {
   display: flex;
   flex-direction: column;
@@ -237,16 +258,22 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
 }
 
 .dot {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 999px;
   background-color: #aaa;
   opacity: 0.6;
   transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 24px;
+  background-color: #000;
+  opacity: 1;
 }
 
 .card3 {

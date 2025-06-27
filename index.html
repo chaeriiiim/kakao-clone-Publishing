@@ -85,7 +85,7 @@
           <div class="visual-card card2">
             <div class="visual-slide-wrapper">
               <!-- 슬라이드1 -->
-              <a href="#" class="slide active">
+              <a href="#" class="slide">
                 <span class="visual-yellow-badge">카카오의 기술</span>
                 <strong>AI 서비스를<br />내 일상 속으로</strong>
                 <span class="visual-tag">#AI #오픈AI #전략적제휴</span>
@@ -115,5 +115,21 @@
       </section>
     </main>
     <!-- main -->
+
+    <!-- script -->
+    <script>
+      const dots = document.querySelectorAll(".dot");
+      const slides = document.querySelectorAll(".card2 .slide");
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          slides.forEach((slide) => slide.classList.remove("active"));
+          dots.forEach((d) => d.classList.remove("active"));
+
+          slides[index].classList.add("active");
+          dot.classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>
