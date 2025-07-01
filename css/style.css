@@ -316,6 +316,10 @@ main {
   align-items: center;
   flex: 1;
   min-width: 0;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 72px;
+  white-space: nowrap;
 }
 
 .kakao-story-title::before {
@@ -324,17 +328,10 @@ main {
   background-image: url(../img/kakao_story_filmicon.gif);
   width: 72px;
   height: 72px;
-  margin-right: 4px;
+  margin-right: 16px;
   background-size: cover;
   background-repeat: no-repeat;
   flex-shrink: 0;
-}
-
-.kakao-story-title span {
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 72px;
-  white-space: nowrap;
 }
 
 .kakao-story-button {
@@ -350,4 +347,66 @@ main {
   background-size: cover;
   display: block;
   background-repeat: no-repeat;
+}
+
+/*카카오 서비스*/
+.kakao-service-section {
+  max-width: 1315px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.kakao-service-title {
+  display: flex;
+  align-items: center;
+  height: 72px;
+}
+
+.kakao-service-title::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/icon_service.gif);
+  width: 72px;
+  height: 72px;
+  margin-right: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.kakao-service-title-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 72px;
+  white-space: nowrap;
+}
+
+.kakao-service-cards {
+  max-width: 1315px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.service-card-list {
+  width: 100%;
+}
+
+.service-card-item {
+  width: 650px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  color: #333333;
+  background-color: #f3f3f3;
+  margin: 16px 0 0 16px;
+  padding: 52px 42px;
+  border-radius: 24px;
+}
+
+.service-card-item strong {
+  font-size: 30px;
 }
