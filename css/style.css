@@ -302,15 +302,20 @@ main {
   max-width: 1315px;
   margin: 0 auto;
   padding-top: 80px;
-  border: 1px solid blue;
 }
 
 .kakao-story-title {
-  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 72px;
-  border: 1px solid red;
+}
+
+.kakao-title-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
 }
 
 .kakao-story-title::before {
@@ -329,13 +334,13 @@ main {
   font-size: 48px;
   font-weight: 500;
   line-height: 72px;
+  white-space: nowrap;
 }
 
 .kakao-story-button {
-  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
 }
 
 .kakao-story-button button {
