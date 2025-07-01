@@ -134,12 +134,19 @@
           </span>
         </div>
 
-        <div class="kakao-service-cards">
+        <div class="kakao-service-cards" id="cardContainer">
           <ul class="service-card-list">
             <li class="service-card-item">
               <strong>커뮤니케이션</strong>
-              <div>
-                <a href="#"></a>
+              <div class="app-icons">
+                <a href="#"><img src="img/icon_1_1.png" alt="카카오톡" /></a>
+                <a href="#"><img src="img/icon_1_2.png" alt="카카오디" /></a>
+                <a href="#"
+                  ><img src="img/icon_1_3.png" alt="카카오 이모티콘"
+                /></a>
+                <a href="#"
+                  ><img src="img/serive_icon_plus.svg" alt="더보기"
+                /></a>
               </div>
             </li>
           </ul>
@@ -150,6 +157,7 @@
 
     <!-- script -->
     <script>
+      //main visual 인디케이터
       const dots = document.querySelectorAll(".dot");
       const slides = document.querySelectorAll(".card2 .slide");
 
@@ -161,6 +169,52 @@
           slides[index].classList.add("active");
           dot.classList.add("active");
         });
+      });
+
+      // 서비스 카드 UI 데이터
+      const serviceData = [
+        {
+          category: "비즈니스",
+          icons: [
+            { src: "img/icon_2_1.png", alt: "카카오톡 채널" },
+            { src: "img/icon_2_2.png", alt: "카카오 클라우드" },
+            { src: "img/icon_2_3.png", alt: "카카오 아지트" },
+            { src: "img/serive_icon_plus.svg", alt: "더보기" },
+          ],
+        },
+      ];
+
+      const container = document.getElementById("cardContainer");
+
+      serviceData.forEach((service) => {
+        const ul = document.createElement("ul");
+        ul.className = "service-card-list";
+
+        const li = document.createElement("li");
+        li.className = "service-card-item";
+
+        const strong = document.createElement("strong");
+        strong.textContent = service.category;
+
+        const iconBox = document.createElement("div");
+        iconBox.className = "app-icons";
+
+        service.icons.forEach((icon) => {
+          const a = document.createElement("a");
+          a.href = "#";
+
+          const img = document.createElement("img");
+          img.src = icon.src;
+          img.alt = icon.alt;
+
+          a.appendChild(img);
+          iconBox.appendChild(a);
+        });
+
+        li.appendChild(strong);
+        li.appendChild(iconBox);
+        ul.appendChild(li);
+        container.appendChild(ul);
       });
     </script>
   </body>

@@ -410,3 +410,18 @@ main {
 .service-card-item strong {
   font-size: 30px;
 }
+
+.service-card-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-icons {
+  display: flex;
+}
+
+.app-icons a > img {
+  width: 56px;
+  height: 56px;
+  margin: 0 0 0 12px;
+}
