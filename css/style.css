@@ -388,7 +388,10 @@ main {
 .kakao-service-cards {
   max-width: 1315px;
   margin: 0 auto;
-  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 43px;
 }
 
 .service-card-list {
@@ -402,7 +405,6 @@ main {
   align-items: center;
   color: #333333;
   background-color: #f3f3f3;
-  margin: 16px 0 0 16px;
   padding: 52px 42px;
   border-radius: 24px;
 }
@@ -424,4 +426,24 @@ main {
   width: 56px;
   height: 56px;
   margin: 0 0 0 12px;
+}
+
+.kakao-service-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.kakao-service-link {
+  width: 316px;
+  height: 76px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
 }
