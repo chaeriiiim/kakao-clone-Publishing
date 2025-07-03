@@ -482,3 +482,15 @@ main {
   background-repeat: no-repeat;
   flex-shrink: 0;
 }
+
+.kakao-news-contents-inner {
+  margin-top: 43px;
+}
+
+.kakao-news-card {
+  width: 428px;
+  height: 621px;
+  border-radius: 36px;
+  background-color: #f3f3f3;
+  padding: 30px 30px 0 30px;
+}
