@@ -168,37 +168,30 @@
         <div class="kakao-news-contents-inner">
           <div class="kakao-news-contents">
             <div class="kakao-news-card newsCard1">
-              <span
-                style="display: flex; align-items: center; margin-bottom: 12px"
-              >
-                <img
-                  src="img/kakao-news-notice.webp"
-                  style="width: 46px; height: 46px; margin-right: 12px"
-                />
-                <span
-                  style="
-                    font-size: 14px;
-                    background-color: #fff;
-                    margin: 1px 0 0;
-                    padding: 0 16px;
-                    line-height: 40px;
-                    height: 41px;
-                  "
-                  >보도자료</span
-                >
-                <span style="color: #333; font-size: 14px; margin: 0 0 0 12px"
-                  >2025.07.02</span
-                >
-                <button
-                  style="border: 1px solid red; width: 24px; height: 24px"
-                ></button>
-              </span>
-              <a href="#">
-                <strong style="font-size: 30px; height: 210px">
+              <!-- 뉴스 카드 헤더 -->
+              <div class="news-card-header">
+                <img src="img/kakao-news-notice.webp" class="news-card-icon" />
+                <span class="news-card-label">보도자료</span>
+                <span class="news-card-date">2025.07.02</span>
+                <button class="news-card-menu-button"></button>
+              </div>
+
+              <!-- 뉴스 본문 -->
+              <a href="#" class="news-card-body">
+                <strong class="news-card-title">
                   카카오프렌즈, 넷플리스 시리즈 &lt;오징어게임&gt; 시즌3와
                   브랜드 협업 진행
                 </strong>
-                <span></span>
+                <span class="news-card-tags">
+                  #카카오프렌즈 #협업 #캐릭터 #IP # 춘식이
+                </span>
+                <span class="news-card-img-wrapper">
+                  <img
+                    src="img/news_img1.webp"
+                    alt="뉴스 이미지"
+                    class="news-card-img"
+                  />
+                </span>
               </a>
             </div>
           </div>
