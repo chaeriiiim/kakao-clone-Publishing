@@ -608,3 +608,38 @@ main {
   width: 24px;
   height: 24px;
 }
+
+/* 약속과 책임 섹션*/
+.kakao-promise-section {
+  max-width: 1315px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.kakao-promise-title {
+  display: flex;
+  align-items: center;
+}
+
+.kakao-promise-title-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 72px;
+  white-space: nowrap;
+}
+
+.kakao-promise-title::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/icon_promise.gif);
+  width: 72px;
+  height: 72px;
+  margin-right: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
