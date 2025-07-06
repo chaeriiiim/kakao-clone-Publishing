@@ -557,9 +557,10 @@ main {
 
 .sub-news-wrapper {
   margin-top: 40px;
+  display: flex;
 }
 
-.sub-news-content-inner {
+.sub-news-card {
   width: 650px;
   height: 198px;
   color: #333;
@@ -570,6 +571,28 @@ main {
 }
 
 .sub-news-title {
-  font-size: 26px;
+  font-size: 28px;
+  font-weight: 600;
   margin-top: 12px;
+}
+
+.news-data-inner {
+  width: 650px;
+  height: 110px;
+  color: #333;
+  background-color: #f3f3f3;
+  margin-top: 8px;
+  padding: 36px 40px;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.news-data-card strong {
+  font-size: 26px;
+}
+
+.news-data-card img {
+  width: 24px;
+  height: 24px;
 }

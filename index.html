@@ -198,22 +198,32 @@
         </div>
 
         <!-- 서브 뉴스 -->
-        <div class="sub-news-wrapper">
+        <div class="sub-news-wrapper" id="subNewsContainer">
           <div class="sub-news-content-inner">
-            <div class="news-card-header">
-              <img src="img/kakao-news-notice.webp" class="news-card-icon" />
-              <span class="news-card-label">보도자료</span>
-              <span class="news-card-date">2025.07.02</span>
-              <button class="news-card-menu-button"></button>
-            </div>
+            <div class="sub-news-card subNewsCard1">
+              <div class="news-card-header">
+                <img src="img/kakao-news-notice.webp" class="news-card-icon" />
+                <span class="news-card-label">보도자료</span>
+                <span class="news-card-date">2025.07.02</span>
+                <button class="news-card-menu-button"></button>
+              </div>
 
-            <a href="#" class="sub-news-body">
-              <p class="sub-news-title">
-                카카오프렌즈, 여름 시즌 맞아 니켈로디언의 '네모바지 스폰지밥'과
-                협업 진행
-              </p>
-            </a>
+              <a href="#" class="sub-news-body">
+                <p class="sub-news-title">
+                  카카오프렌즈, 여름 시즌 맞아 니켈로디언의 '네모바지
+                  스폰지밥'과 협업 진행
+                </p>
+              </a>
+            </div>
           </div>
+        </div>
+
+        <!-- 서브 뉴스 자료 -->
+        <div class="news-data-inner">
+          <a href="#" class="news-data-card">
+            <strong>보도자료</strong>
+            <img src="img/visual_next_button.png" alt="화살표 아이콘" />
+          </a>
         </div>
       </section>
     </main>
@@ -365,6 +375,39 @@
     `;
 
         newsContainer.appendChild(card);
+      });
+
+      //서브 뉴스 데이터
+      const subNewsData = [
+        {
+          date: "2025.06.28",
+          title: "카카오, 파트너 교육 플랫폼 '카카오비즈니스 세미나' 개편",
+          href: "#",
+        },
+      ];
+
+      const subNewsContainer = document.getElementById("subNewsContainer");
+
+      subNewsData.forEach((subNews) => {
+        const subCard = document.createElement("div");
+        subCard.className = "sub-news-card";
+
+        subCard.innerHTML = `
+          <div class="news-card-header">
+            <img src="img/kakao-news-notice.webp" class="news-card-icon" />
+            <span class="news-card-label">보도자료</span>
+            <span class="news-card-date">${subNews.date}</span>
+            <button class="news-card-menu-button"></button>
+          </div>
+
+          <a href=${subNews.href} class="sub-news-body">
+            <p class="sub-news-title">
+              ${subNews.title}
+            </p>
+          </a>
+        `;
+
+        subNewsContainer.appendChild(subCard);
       });
     </script>
   </body>
