@@ -165,7 +165,7 @@
         <div class="kakao-news-title">
           <span class="kakao-news-title-content"> 오늘의 뉴스 </span>
         </div>
-        <div class="kakao-news-contents-inner">
+        <div class="kakao-news-contents-inner" id="newsCardContainer">
           <div class="kakao-news-contents">
             <div class="kakao-news-card newsCard1">
               <!-- 뉴스 카드 헤더 -->
@@ -294,6 +294,58 @@
         li.appendChild(iconBox);
         ul.appendChild(li);
         container.appendChild(ul);
+      });
+
+      //뉴스 카드 데이터
+      const newsData = [
+        {
+          date: "2025.07.01",
+          title:
+            "카카오, 2025 '찾아가는 시니어 디지털 스쿨' 시니어티쳐 발대식 개최",
+          tags: ["#더가깝게카카오", "#찾아가는시니어디지털스쿨", "#카카오"],
+          imgSrc: "img/news_img2.webp",
+          imgAlt: "카카오 뉴스 이미지 2",
+        },
+        {
+          date: "2025.07.02",
+          title:
+            "카카오프렌즈, 넷플릭스 시리즈 <오징어게임> 시즌3와 브랜드 협업 진행",
+          tags: ["#더가깝게카카오", "#찾아가는시니어디지털스쿨", "#카카오"],
+          imgSrc: "img/news_img1.webp",
+          imgAlt: "카카오 뉴스 이미지 1",
+        },
+      ];
+
+      const newsContainer = document.getElementById("newsCardContainer");
+
+      newsData.forEach((news) => {
+        const card = document.createElement("div");
+        card.className = "kakao-news-card";
+
+        card.innerHTML = `
+      <div class="news-card-header">
+        <img src="img/kakao-news-notice.webp" class="news-card-icon" />
+        <span class="news-card-label">보도자료</span>
+        <span class="news-card-date">${news.date}</span>
+        <button class="news-card-menu-button"></button>
+      </div>
+
+      <a href="#" class="news-card-body">
+        <strong class="news-card-title">
+          ${news.title}
+        </strong>
+        <span class="news-card-tags">
+          ${news.tags.join(" ")}
+        </span>
+        <span class="news-card-img-wrapper">
+          <img src="${news.imgSrc}" alt="${
+          news.imgAlt
+        }" class="news-card-img" />
+        </span>
+      </a>
+    `;
+
+        newsContainer.appendChild(card);
       });
     </script>
   </body>

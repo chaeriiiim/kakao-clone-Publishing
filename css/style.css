@@ -485,6 +485,8 @@ main {
 
 .kakao-news-contents-inner {
   margin-top: 43px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .kakao-news-card {
@@ -493,7 +495,6 @@ main {
   border-radius: 36px;
   background-color: #f3f3f3;
   padding: 30px 30px 0 30px;
-  border: 1px solid red;
 }
 
 .news-card-header {
