@@ -524,11 +524,11 @@ main {
   margin: 0 0 0 12px;
 }
 
-.news-card-menu-button {
+/* .news-card-menu-button {
   border: 1px solid red;
   width: 24px;
   height: 24px;
-}
+} */
 
 .news-card-title {
   font-size: 30px;
@@ -553,4 +553,23 @@ main {
   width: 100%;
   display: block;
   height: auto;
+}
+
+.sub-news-wrapper {
+  margin-top: 40px;
+}
+
+.sub-news-content-inner {
+  width: 650px;
+  height: 198px;
+  color: #333;
+  background-color: #f3f3f3;
+  margin: 0px 8px 0px 0px;
+  padding: 36px;
+  border-radius: 36px;
+}
+
+.sub-news-title {
+  font-size: 26px;
+  margin-top: 12px;
 }
