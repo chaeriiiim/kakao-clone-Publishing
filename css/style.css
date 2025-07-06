@@ -576,6 +576,12 @@ main {
   margin-top: 12px;
 }
 
+.news-data-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
 .news-data-inner {
   width: 650px;
   height: 110px;
@@ -586,6 +592,12 @@ main {
   border-radius: 36px;
   display: flex;
   align-items: center;
+}
+
+.news-data-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .news-data-card strong {

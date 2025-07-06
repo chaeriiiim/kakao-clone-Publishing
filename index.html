@@ -219,11 +219,13 @@
         </div>
 
         <!-- 서브 뉴스 자료 -->
-        <div class="news-data-inner">
-          <a href="#" class="news-data-card">
-            <strong>보도자료</strong>
-            <img src="img/visual_next_button.png" alt="화살표 아이콘" />
-          </a>
+        <div class="news-data-wrapper" id="newsDataContainer">
+          <div class="news-data-inner">
+            <a href="#" class="news-data-card">
+              <strong>보도자료</strong>
+              <img src="img/next_arrow.svg" alt="화살표 아이콘" />
+            </a>
+          </div>
         </div>
       </section>
     </main>
@@ -352,27 +354,27 @@
         card.className = "kakao-news-card";
 
         card.innerHTML = `
-      <div class="news-card-header">
-        <img src="img/kakao-news-notice.webp" class="news-card-icon" />
-        <span class="news-card-label">보도자료</span>
-        <span class="news-card-date">${news.date}</span>
-        <button class="news-card-menu-button"></button>
-      </div>
+        <div class="news-card-header">
+          <img src="img/kakao-news-notice.webp" class="news-card-icon" />
+          <span class="news-card-label">보도자료</span>
+          <span class="news-card-date">${news.date}</span>
+          <button class="news-card-menu-button"></button>
+        </div>
 
-      <a href="#" class="news-card-body">
-        <strong class="news-card-title">
-          ${news.title}
-        </strong>
-        <span class="news-card-tags">
-          ${news.tags.join(" ")}
-        </span>
-        <span class="news-card-img-wrapper">
-          <img src="${news.imgSrc}" alt="${
+        <a href="#" class="news-card-body">
+          <strong class="news-card-title">
+            ${news.title}
+          </strong>
+          <span class="news-card-tags">
+            ${news.tags.join(" ")}
+          </span>
+          <span class="news-card-img-wrapper">
+            <img src="${news.imgSrc}" alt="${
           news.imgAlt
         }" class="news-card-img" />
-        </span>
-      </a>
-    `;
+          </span>
+        </a>
+      `;
 
         newsContainer.appendChild(card);
       });
@@ -393,21 +395,47 @@
         subCard.className = "sub-news-card";
 
         subCard.innerHTML = `
-          <div class="news-card-header">
-            <img src="img/kakao-news-notice.webp" class="news-card-icon" />
-            <span class="news-card-label">보도자료</span>
-            <span class="news-card-date">${subNews.date}</span>
-            <button class="news-card-menu-button"></button>
-          </div>
+            <div class="news-card-header">
+              <img src="img/kakao-news-notice.webp" class="news-card-icon" />
+              <span class="news-card-label">보도자료</span>
+              <span class="news-card-date">${subNews.date}</span>
+              <button class="news-card-menu-button"></button>
+            </div>
 
-          <a href=${subNews.href} class="sub-news-body">
-            <p class="sub-news-title">
-              ${subNews.title}
-            </p>
-          </a>
-        `;
+            <a href=${subNews.href} class="sub-news-body">
+              <p class="sub-news-title">
+                ${subNews.title}
+              </p>
+            </a>
+          `;
 
         subNewsContainer.appendChild(subCard);
+      });
+
+      // 뉴스 자료
+      const referenceData = [{ title: "미디어 자료", href: "#" }];
+
+      const newsDataContainer = document.getElementById("newsDataContainer");
+
+      referenceData.forEach((reference) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "news-data-inner";
+
+        const aTag = document.createElement("a");
+        aTag.href = reference.href;
+        aTag.className = "news-data-card";
+
+        const title = document.createElement("strong");
+        title.textContent = reference.title;
+
+        const img = document.createElement("img");
+        img.src = "img/next_arrow.svg";
+        img.alt = "화살표 아이콘";
+
+        aTag.appendChild(title);
+        aTag.appendChild(img);
+        wrapper.appendChild(aTag);
+        newsDataContainer.appendChild(wrapper);
       });
     </script>
   </body>
